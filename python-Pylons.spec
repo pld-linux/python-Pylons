@@ -5,8 +5,8 @@ Summary:	Pylons Web Framework
 Summary(pl):	Środowisko Pylons
 Name:		python-%{fname}
 Version:	0.9.3
-Release:	0.1
-License:	BSD
+Release:	0.2
+License:	Pylons
 Group:		Libraries/Python
 Source0:    http://cheeseshop.python.org/packages/source/P/%{fname}/%{fname}-%{version}.tar.gz
 # Source0-md5:   1c36a3d58d81281a0f252a747ad38a00
@@ -15,8 +15,13 @@ BuildRequires:  python-setuptools
 Requires:	python >= %{python_version}
 Requires:   python-Paste
 Requires:   python-PasteDeploy
-Requires:   python-simplejson
-Requires:   python-FormEncode
+Requires:   python-simplejson >= 1.4
+Requires:   python-FormEncode >= 0.6
+Requires:   python-Myghty >= 1.1
+Requires:   python-MyghtyUtils >= 0.52
+Requires:   python-Beaker >= 0.6.1
+Requires:   python-WebHelpers >= 0.2.2
+Requires:   python-Routes >= 1.5.2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -41,12 +46,12 @@ python setup.py install \
 	--root=$RPM_BUILD_ROOT \
 	--optimize=2
 
+find $RPM_BUILD_ROOT%{py_sitescriptdir} -name \*.py -exec rm {} \;
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%dir %{py_sitescriptdir}/%{module}
-%{py_sitescriptdir}/%{module}/*.py[co]
-%{py_sitescriptdir}/%{module}/decorators/*.py[co]
-%{py_sitescriptdir}/%{module}/i18n/*.py[co]
+%{py_sitescriptdir}/%{module}
+%{py_sitescriptdir}/%{fname}-%{version}-py%{python_version}.egg-info
