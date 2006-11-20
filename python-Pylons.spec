@@ -1,6 +1,6 @@
 %define 	module	        pylons
 %define     fname           Pylons
-%define     python_version  2.4
+%define     python_version  2.5
 Summary:	Pylons Web Framework
 Summary(pl):	Środowisko Pylons
 Name:		python-%{fname}
