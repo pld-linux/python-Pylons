@@ -13,6 +13,7 @@ Source0:    http://cheeseshop.python.org/packages/source/P/%{fname}/%{fname}-%{v
 URL:		http://pylonshq.com/
 BuildRequires:  python-setuptools
 Requires:	python >= %{python_version}
+Requires:   python-setuptools
 Requires:   python-Paste
 Requires:   python-PasteDeploy
 Requires:   python-simplejson >= 1.4
