@@ -1,6 +1,6 @@
 %define		fname		Pylons
 Summary:	Pylons Web Framework
-Summary(pl):	¶rodowisko WWW Pylons
+Summary(pl.UTF-8):   ≈örodowisko WWW Pylons
 Name:		python-%{fname}
 Version:	0.9.3
 Release:	0.2
@@ -28,8 +28,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Pylons is a lightweight web framework emphasizing flexibility and
 rapid development.
 
-%description -l pl
-Pylons to nieduøe ∂rodowisko do szybkiego i elastycznego tworzenia
+%description -l pl.UTF-8
+Pylons to niedu≈ºe ≈õrodowisko do szybkiego i elastycznego tworzenia
 interaktywnych stron WWW.
 
 %prep
