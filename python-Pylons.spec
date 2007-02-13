@@ -1,6 +1,6 @@
 %define		fname		Pylons
 Summary:	Pylons Web Framework
-Summary(pl.UTF-8):   Środowisko WWW Pylons
+Summary(pl.UTF-8):	Środowisko WWW Pylons
 Name:		python-%{fname}
 Version:	0.9.3
 Release:	0.2
