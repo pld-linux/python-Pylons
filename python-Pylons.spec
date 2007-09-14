@@ -2,15 +2,16 @@
 Summary:	Pylons Web Framework
 Summary(pl.UTF-8):	Środowisko WWW Pylons
 Name:		python-%{fname}
-Version:	0.9.3
-Release:	0.2
+Version:	0.9.6
+Release:	0.1
 License:	Pylons
 Group:		Libraries/Python
 Source0:	http://cheeseshop.python.org/packages/source/P/Pylons/%{fname}-%{version}.tar.gz
-# Source0-md5:	1c36a3d58d81281a0f252a747ad38a00
+# Source0-md5:	09a9992bc22caaace58b3a18d21df858
 URL:		http://pylonshq.com/
 BuildRequires:	python-setuptools
-BuildRequires:	python >= 1:2.5
+BuildRequires:	python >= 1:2.4
+BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
 Requires:	python-Paste
 Requires:	python-PasteDeploy
@@ -45,7 +46,7 @@ python setup.py install \
 	--root=$RPM_BUILD_ROOT \
 	--optimize=2
 
-find $RPM_BUILD_ROOT%{py_sitescriptdir} -name \*.py -exec rm {} \;
+%py_postclean
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -53,4 +54,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %{py_sitescriptdir}/pylons
+%{py_sitescriptdir}/tests
 %{py_sitescriptdir}/%{fname}-%{version}-py*.egg-info
