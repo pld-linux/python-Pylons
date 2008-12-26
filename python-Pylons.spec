@@ -3,7 +3,7 @@ Summary:	Pylons Web Framework
 Summary(pl.UTF-8):	Środowisko WWW Pylons
 Name:		python-%{fname}
 Version:	0.9.6.2
-Release:	0.1
+Release:	0.2
 License:	Pylons
 Group:		Libraries/Python
 Source0:	http://cheeseshop.python.org/packages/source/P/Pylons/%{fname}-%{version}.tar.gz
