@@ -2,12 +2,12 @@
 Summary:	Pylons Web Framework
 Summary(pl.UTF-8):	Środowisko WWW Pylons
 Name:		python-%{fname}
-Version:	0.9.6.2
-Release:	0.2
+Version:	0.9.7
+Release:	0.1
 License:	Pylons
 Group:		Libraries/Python
 Source0:	http://cheeseshop.python.org/packages/source/P/Pylons/%{fname}-%{version}.tar.gz
-# Source0-md5:	01d0e1ca95cfbfa1f73b8b5ae9a5f0a5
+# Source0-md5:	f6de97faa730eb0e975f6b2e64a0c574
 URL:		http://pylonshq.com/
 BuildRequires:	python-setuptools
 BuildRequires:	python >= 1:2.4
@@ -54,5 +54,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %{py_sitescriptdir}/pylons
-%{py_sitescriptdir}/tests
 %{py_sitescriptdir}/%{fname}-%{version}-py*.egg-info
