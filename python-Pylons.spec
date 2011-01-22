@@ -9,19 +9,21 @@ Group:		Libraries/Python
 Source0:	http://cheeseshop.python.org/packages/source/P/Pylons/%{fname}-%{version}.tar.gz
 # Source0-md5:	f6de97faa730eb0e975f6b2e64a0c574
 URL:		http://pylonshq.com/
-BuildRequires:	python-setuptools
 BuildRequires:	python >= 1:2.4
+BuildRequires:	python-modules
+BuildRequires:	python-setuptools
+BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
-Requires:	python-Paste
-Requires:	python-PasteDeploy
-Requires:	python-simplejson >= 1.4
+Requires:	python-Beaker >= 0.6.1
 Requires:	python-FormEncode >= 0.6
 Requires:	python-Myghty >= 1.1
 Requires:	python-MyghtyUtils >= 0.52
-Requires:	python-Beaker >= 0.6.1
-Requires:	python-WebHelpers >= 0.2.2
+Requires:	python-Paste
+Requires:	python-PasteDeploy
 Requires:	python-Routes >= 1.5.2
+Requires:	python-WebHelpers >= 0.2.2
+Requires:	python-simplejson >= 1.4
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
