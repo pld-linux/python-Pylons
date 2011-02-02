@@ -2,12 +2,12 @@
 Summary:	Pylons Web Framework
 Summary(pl.UTF-8):	Środowisko WWW Pylons
 Name:		python-%{fname}
-Version:	0.9.7
+Version:	1.0
 Release:	1
 License:	Pylons
 Group:		Libraries/Python
 Source0:	http://cheeseshop.python.org/packages/source/P/Pylons/%{fname}-%{version}.tar.gz
-# Source0-md5:	f6de97faa730eb0e975f6b2e64a0c574
+# Source0-md5:	b7687e26d0275eaf7bf44ca4883f4428
 URL:		http://pylonshq.com/
 BuildRequires:	python >= 1:2.4
 BuildRequires:	python-modules
